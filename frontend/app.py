@@ -62,7 +62,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-API_URL = "https://sspdatascience.onrender.com/generate-report"
+API_URL = "http://127.0.0.1:8000/generate-report"
 
 # Header
 st.markdown(
