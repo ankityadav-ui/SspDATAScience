@@ -1,0 +1,39 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Local environment/config files
+.env
+.env.*
+*.env
+
+# Test and coverage outputs
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Logs and generated outputs
+*.log
+generated_maintenance_report.json
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
