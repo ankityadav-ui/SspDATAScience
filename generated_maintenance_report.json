@@ -1,0 +1,29 @@
+{
+  "machine_status": "Operational with elevated risks",
+  "severity": "Moderate",
+  "urgency": "Medium",
+  "failure_probability": "30.83%",
+  "summary": "Machine M is currently operational with a predicted failure probability of 30.83%. Key sensor data indicates elevated vibration, significant tool wear, and increased thermal stress, suggesting a need for proactive maintenance to prevent future issues.",
+  "top_risk_factors": [
+    "High Vibration (Level: High, Intensity: 3)",
+    "Significant Tool Wear (180 min for 120 operational hours)",
+    "Elevated Thermal Stress (Heat Stress Score: 475.0, Temperature Difference: 9.5K)",
+    "Average Maintenance History"
+  ],
+  "possible_causes": [
+    "Developing mechanical imbalance or misalignment contributing to high vibration.",
+    "Abrasive operational conditions or material properties accelerating tool wear.",
+    "Inefficient cooling or sustained high-load operation leading to thermal stress.",
+    "Suboptimal maintenance practices potentially allowing issues to accumulate."
+  ],
+  "recommended_actions": [
+    "Conduct a detailed vibration analysis to identify and address root causes (e.g., balancing, alignment, bearing inspection).",
+    "Inspect and consider replacement of the tool; review tool material and operational parameters (torque, RPM) for wear optimization.",
+    "Evaluate the cooling system's efficiency and review process temperatures to mitigate thermal stress.",
+    "Review and optimize the maintenance schedule and procedures, particularly for components affected by vibration and wear.",
+    "Implement continuous monitoring of vibration, temperature, and tool wear for early detection of trends."
+  ],
+  "downtime_risk": "While no immediate failure is predicted (Class 0), the elevated failure probability and concerning sensor readings indicate a moderate risk of unplanned downtime if these issues are not addressed proactively.",
+  "performance_impact": "Current high vibration and tool wear are likely impacting operational efficiency and potentially product quality. Unaddressed thermal stress could lead to accelerated component degradation, reduced lifespan, and further performance decline.",
+  "confidence_note": "The assessment is based on an ML prediction indicating no immediate failure (Class 0) but with a notable 30.83% failure probability. This is strongly supported by real-time sensor data highlighting significant thermal stress, wear, and vibration, providing a high confidence in the identified risk factors."
+}
