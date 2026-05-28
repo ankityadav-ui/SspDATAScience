@@ -1,5 +1,4 @@
 import requests
-import matplotlib.pyplot as plt
 import streamlit as st
 
 
@@ -215,36 +214,6 @@ if "report" in st.session_state:
         f'<div class="glass-panel"><div class="section-title">Failure probability</div><div class="subtle-text">{report["failure_probability"]}</div></div>',
         unsafe_allow_html=True,
     )
-
-    chart_cols = st.columns(2)
-
-    with chart_cols[0]:
-        st.markdown('<div class="glass-panel"><div class="section-title">Sensor snapshot</div><div class="subtle-text">Key machine metrics compared in one view.</div></div>', unsafe_allow_html=True)
-        sensor_metrics = {
-            "Tool wear": machine_data["tool_wear_min"],
-            "Temperature diff": machine_data["temperature_difference"],
-            "RPM": machine_data["rotational_speed_rpm"],
-            "Stress score": machine_data["stress_score"],
-        }
-        fig, ax = plt.subplots(figsize=(6, 3.4))
-        ax.bar(sensor_metrics.keys(), sensor_metrics.values(), color=["#2563eb", "#f59e0b", "#ef4444", "#10b981"])
-        ax.set_ylabel("Metric value")
-        ax.set_title("Key sensor values")
-        ax.tick_params(axis="x", rotation=20)
-        fig.tight_layout()
-        st.pyplot(fig)
-
-    with chart_cols[1]:
-        st.markdown('<div class="glass-panel"><div class="section-title">Risk focus</div><div class="subtle-text">The top risk factors flagged in the assessment.</div></div>', unsafe_allow_html=True)
-        risk_factors = report["top_risk_factors"]
-        risk_labels = [factor.split("(")[0].strip() for factor in risk_factors]
-        fig2, ax2 = plt.subplots(figsize=(6, 3.4))
-        ax2.barh(risk_labels, [1] * len(risk_factors), color=["#ef4444", "#f59e0b", "#fb7185", "#0f766e"])
-        ax2.set_xlabel("Risk presence")
-        ax2.set_title("Top risk factors")
-        ax2.set_xlim(0, 1.2)
-        fig2.tight_layout()
-        st.pyplot(fig2)
 else:
     st.markdown(
         '<div class="glass-panel"><div class="section-title">Waiting for report</div><div class="subtle-text">Submit the input form to generate a structured maintenance assessment.</div></div>',
